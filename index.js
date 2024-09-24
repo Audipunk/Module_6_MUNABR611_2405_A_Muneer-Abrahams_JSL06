@@ -6,7 +6,7 @@ const menu = {
 };
 
 // Function to display menu items by category
-function displayMenuItems(menu) {
+function displayMenuItems(menu) { 
     // Get the menu container element from the HTML
     const menuContainer = document.getElementById("menu");
 
