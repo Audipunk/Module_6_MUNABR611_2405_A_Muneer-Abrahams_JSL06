@@ -39,55 +39,65 @@ function displayMenuItems(menu) {
     }
             
 
-function addToOrder(itemName) {
-   
-    const orderItemsList = document.getElementById('order-items');
-    const orderTotalElement = document.getElementById('order-total');
-
-   
-    const orderItemElement = document.createElement('li');
-    orderItemElement.textContent = itemName;
- 
-    orderItem.addEventListener("click", () =>
-        removeFromOrder(orderItem, itemName)
-);
-
-    orderItemsList.appendChild(orderItemElement);
-    
-    let currentTotal = parseFloat(orderTotal.textContent.replace(" ", "")) || 0;
-  currentTotal += getItemPrice(itemName);
-
-  orderTotal.textContent = `${currentTotal.toFixed(2)}`;
-}
-
-function removeFromOrder(orderItem, itemName) {
-    const orderItemsList = document.getElementById("order-items");
-    const orderTotal = document.getElementById("order-total");
-  
-    orderItemsList.removeChild(orderItem);
-  
-    let currentTotal = parseFloat(orderTotal.textContent.replace("$", "")) || 0;
-    currentTotal -= getItemPrice(itemName);
-    orderTotal.textContent = `${currentTotal.toFixed(2)}`;
-  }   
-
-
-  function getItemPrice(itemName) {
-    const prices = {
-      "Garlic Bread": 49,
-      Bruschetta: 32,
-      "Margherita Pizza": 85,
-      "Spaghetti Carbonara": 110,
-      Tiramisu: 70,
-      Cheesecake: 65,
-    };
-    return prices[itemName] || 0;
-  }
-
-
-// Start the menu system by calling the init function
-function initMenuSystem(menu) {
-    displayMenuItems(menu);
-}
-
-document.addEventListener("DOMContentLoaded", () => initMenuSystem(menu));
+    function addToOrder(itemName) {
+        // QUESTION: What HTML elements represent the order items list and the order total?
+        const orderItemsList = document.getElementById("order-items");
+        const orderTotal = document.getElementById("order-total");
+      
+        // QUESTION: Create a list item for the order here.
+        const orderItem = document.createElement("li");
+      
+        // QUESTION: How can you set the text content of the list item to the item name?
+        orderItem.textContent = itemName;
+      
+        // Add a click event listener to the order item for removal
+        orderItem.addEventListener("click", () =>
+          removeFromOrder(orderItem, itemName)
+        );
+      
+        // QUESTION: How can you append the list item to the order items list?
+        orderItemsList.appendChild(orderItem);
+      
+        // QUESTION: Calculate and update the total price. How can you access the current total and item price?
+        let currentTotal = parseFloat(orderTotal.textContent.replace(" ", "")) || 0;
+        currentTotal += getItemPrice(itemName);
+      
+        // QUESTION: How can you update the text content of the order total element with the new total?
+        orderTotal.textContent = `${currentTotal.toFixed(2)}`;
+      }
+      // Function to remove an item from the order
+      function removeFromOrder(orderItem, itemName) {
+        const orderItemsList = document.getElementById("order-items");
+        const orderTotal = document.getElementById("order-total");
+      
+        orderItemsList.removeChild(orderItem);
+      
+        let currentTotal = parseFloat(orderTotal.textContent.replace("$", "")) || 0;
+        currentTotal -= getItemPrice(itemName);
+        orderTotal.textContent = `${currentTotal.toFixed(2)}`;
+      }
+      
+      function getItemPrice(itemName) {
+        const prices = {
+          "Garlic Bread": 69,
+          Bruschetta: 62,
+          "Margherita Pizza": 85,
+          "Spaghetti Carbonara": 410,
+          Tiramisu: 78,
+          Cheesecake: 85,
+        };
+        return prices[itemName] || 0;
+      }
+      
+      // QUESTION: What's the first step to initialize the menu system and display the menu?
+      
+      // Function to initialize the menu system
+      function initMenuSystem(menu) {
+        // QUESTION: What function should you call to display the menu?
+        displayMenuItems(menu);
+      }
+      
+      // QUESTION: How can you start the menu system? What function should you call here?
+      
+      // Call the init function to start the menu system
+      document.addEventListener("DOMContentLoaded", () => initMenuSystem(menu));
