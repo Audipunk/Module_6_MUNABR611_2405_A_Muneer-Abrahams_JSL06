@@ -18,9 +18,12 @@ function displayMenuItems(menu) {
       
         menuContainer.appendChild(categoryElement);
     }
+    const itemsList = document.createElement("ul");
+
+    menuContainer.appendChild(itemsList);
 
         
-        menu[category].forEach(item => {
+    items.forEach((item) => {
         
         const itemElement = document.createElement('li');
         itemElement.textContent = item;
