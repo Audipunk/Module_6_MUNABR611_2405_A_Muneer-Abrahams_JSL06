@@ -71,7 +71,7 @@ const menu = {
           "Garlic Bread": 69,
           Bruschetta: 62,
           "Margherita Pizza": 85,
-          "Spaghetti Carbonara": 410,
+          "Spaghetti Carbonara": 150,
           Tiramisu: 78,
           Cheesecake: 85,
         };
