@@ -72,6 +72,7 @@ const menu = {
           Bruschetta: 62,
           "Margherita Pizza": 85,
           "Spaghetti Carbonara": 150,
+          "Butter Chicken": 170,
           Tiramisu: 78,
           Cheesecake: 85,
         };
