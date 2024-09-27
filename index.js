@@ -1,6 +1,6 @@
 const menu = {
     Starters: ["Garlic Bread", "Bruschetta"],
-    MainCourses: ["Margherita Pizza", "Spaghetti Carbonara"],
+    MainCourses: ["Margherita Pizza", "Spaghetti Carbonara", "Butter Chicken"],
     Desserts: ["Tiramisu", "Cheesecake"],
   };
   
